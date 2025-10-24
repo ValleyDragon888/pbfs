@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<head>
+    <title>pbfs</title>
+    <style>
+        h1 {
+            text-align: center
+        }
+        body {
+            background-color: black;
+            color: azure;
+            font-family: sans-serif;;
+        }
+        .rounded_edge_border {
+            border: 2px solid rgb(95 97 110);
+            border-radius: 0.5em;
+            border-color: blue;
+            padding: 20px;
+            flex: 1
+}
+    </style>
+    <script>
+        function ApplyTags() {
+            fics = {
+                "AIC-Mum": {"novel" : "AIC", "author" : "Just_Someone_888"},
+                "AIC-Gentleman": {"novel" : "AIC", "author" : "psycoANALyse_me69"}
+            }
+            fic_names = ["AIC-Mum", "AIC-Gentleman"]
+            novels = []
+            if (document.getElementById("AIC").checked) {novels.push("AIC")}
+            authors = []
+            if (document.getElementById("Just_Someone_888").checked) {authors.push("Just_Someone_888")}
+            if (document.getElementById("psycoANALyse_me69").checked) {authors.push("psycoANALyse_me69")}
+            for (var fic of fic_names) {
+                if (authors.includes(fics[fic]["author"]) && novels.includes(fics[fic]["novel"])) {
+                    document.getElementById(fic).style.display = "block"
+                } else {
+                    document.getElementById(fic).style.display = "none"
+                }
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+<h1>PBFS</h1>
+
+<h2>Novel</h2>
+<input type="checkbox" id="AIC" name="AIC" value="AIC" checked>
+<label for="AIC"> AIC</label><br>  
+
+<h2>Author</h2>
+<input type="checkbox" id="Just_Someone_888" name="Just_Someone_888" value="Just_Someone_888" checked>
+<label for="Just_Someone_888"> Just_Someone_888</label><br>  
+<input type="checkbox" id="psycoANALyse_me69" name="psycoANALyse_me69" value="psycoANALyse_me69" checked>
+<label for="psycoANALyse_me69"> psycoANALyse_me69</label><br> 
+
+<button onclick="ApplyTags()">Apply</button>
+
+<div id="AIC-Mum" class="rounded_edge_border">
+    <p><b><u>AIC An Inspector Calls Your Mum</u></b></p>
+    <p>Author: Just_Someone_888</p>
+    <p>Word count: 1.9k, Chapters: 7</p>
+    <p><a href="https://archiveofourown.org/works/72275696?view_full_work=true">AO3</a>, website link</p>
+    <p>Tags: <b>[AIC]</b>, <b>[Just_Someone_888]</b></p>
+</div>
+<div id="AIC-Gentleman" class="rounded_edge_border">
+    <p><b><u>AIC A Gentleman Knocks</u></b></p>
+    <p>Author: psycoANALyse_me69</p>
+    <p>Word count: 3.5k, Chapters: 11/?</p>
+    <p><a href="https://archiveofourown.org/works/72235721?view_full_work=true">AO3</a>, website link</p>
+    <p>Tags: <b>[AIC]</b>, <b>[psycoANALyse_me69]</b></p>
+</div>
+</body>
+
+</html>
