@@ -51,7 +51,13 @@
                     document.getElementById(fic).style.display = "none"
                 }
             }
-
+        }
+        function ShowTags() {
+            if (document.getElementById("showhidetags").checked) {
+                document.getElementById("tags-inner").style.display = "block"
+            } else {
+                document.getElementById("tags-inner").style.display = "none"
+            }
         }
     </script>
 </head>
@@ -59,7 +65,8 @@
 <body>
 <h1>PBFS</h1>
 <div class="tags" id="tags">
-<h2>Tags</h2>
+<h2>Tags</h2><label><input type="checkbox" onclick="ShowTags()" id="showhidetags" checked>Show tags</label>
+<div id="tags-inner">
 <h3>Novel</h3>
 <input type="checkbox" id="AIC" name="AIC" value="AIC" checked>
 <label for="AIC"> AIC</label><br>  
@@ -72,6 +79,7 @@
 
 <br>
 <button onclick="ApplyTags()">Apply</button>
+</div>
 </div>
 <div id="AIC-Mum" class="rounded_edge_border">
     <p><b><u>AIC An Inspector Calls Your Mum</u></b></p>
