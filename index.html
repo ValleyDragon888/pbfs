@@ -37,11 +37,13 @@
         function ApplyTags() {
             fics = {
                 "AIC-Mum": {"novel" : "AIC", "author" : "Just_Someone_888"},
-                "AIC-Gentleman": {"novel" : "AIC", "author" : "psycoANALyse_me69"}
+                "AIC-Gentleman": {"novel" : "AIC", "author" : "psycoANALyse_me69"},
+                "Jerry": {"novel": "Original", "author": "Just_Someone_888"}
             }
-            fic_names = ["AIC-Mum", "AIC-Gentleman"]
+            fic_names = ["AIC-Mum", "AIC-Gentleman", "Jerry"]
             novels = []
             if (document.getElementById("AIC").checked) {novels.push("AIC")}
+            if (document.getElementById("Original").checked) {novels.push("Original")}
             authors = []
             if (document.getElementById("Just_Someone_888").checked) {authors.push("Just_Someone_888")}
             if (document.getElementById("psycoANALyse_me69").checked) {authors.push("psycoANALyse_me69")}
@@ -70,7 +72,9 @@
 <div id="tags-inner">
 <h3>Novel</h3>
 <input type="checkbox" id="AIC" name="AIC" value="AIC" checked>
-<label for="AIC"> AIC</label><br>  
+<label for="AIC"> AIC</label><br> 
+<input type="checkbox" id="Original" name="Original" value="Original" checked>
+<label for="Original"> Original</label><br>  
 
 <h3>Author</h3>
 <input type="checkbox" id="Just_Someone_888" name="Just_Someone_888" value="Just_Someone_888" checked>
@@ -95,6 +99,14 @@
     <p>Word count: 4k, Chapters: 12/?</p>
     <p><a href="https://archiveofourown.org/works/72235721?view_full_work=true">AO3</a> <a href="fics/AIC-Gentleman.html">Raw</a></p>
     <p>Tags: <b>[AIC]</b>, <b>[psycoANALyse_me69]</b></p>
+</div></div>
+<div id="Jerry" ><br><div class="rounded_edge_border">
+    <p><b><u>The last days of Jerry
+    </u></b></p>
+    <p>Author: Just_Someone_888</p>
+    <p>Word count: 0.3k, Chapters: 1/?</p>
+    <p><a href="https://archiveofourown.org/works/73171106?view_full_work=true">AO3</a> <a href="fics/Jerry.html">Raw</a></p>
+    <p>Tags: <b>[Original]</b>, <b>[Just_Someone_888]</b></p>
 </div></div>
 
 <hr>
