@@ -38,11 +38,13 @@
             fics = {
                 "AIC-Mum": {"novel" : "AIC", "author" : "Just_Someone_888"},
                 "AIC-Gentleman": {"novel" : "AIC", "author" : "psycoANALyse_me69"},
-                "Jerry": {"novel": "Original", "author": "Just_Someone_888"}
+                "Jerry": {"novel": "Original", "author": "Just_Someone_888"},
+                "ACC-Calendar": {"novel": "ACC", "author" : "psycoANALyse_me69"}
             }
-            fic_names = ["AIC-Mum", "AIC-Gentleman", "Jerry"]
+            fic_names = ["AIC-Mum", "AIC-Gentleman", "Jerry", "ACC-Calendar"]
             novels = []
             if (document.getElementById("AIC").checked) {novels.push("AIC")}
+            if (document.getElementById("ACC").checked) {novels.push("ACC")}
             if (document.getElementById("Original").checked) {novels.push("Original")}
             authors = []
             if (document.getElementById("Just_Someone_888").checked) {authors.push("Just_Someone_888")}
@@ -72,7 +74,9 @@
 <div id="tags-inner">
 <h3>Novel</h3>
 <input type="checkbox" id="AIC" name="AIC" value="AIC" checked>
-<label for="AIC"> AIC</label><br> 
+<label for="AIC"> AIC</label><br>
+<input type="checkbox" id="ACC" name="ACC" value="ACC" checked>
+<label for="ACC"> ACC</label><br> 
 <input type="checkbox" id="Original" name="Original" value="Original" checked>
 <label for="Original"> Original</label><br>  
 
@@ -86,6 +90,13 @@
 <button onclick="ApplyTags()">Apply</button>
 </div>
 </div>
+<div id="ACC-Calendar"><br><div class="rounded_edge_border">
+    <p><b><u>A Christmas Calendar</u></b></p>
+    <p>Author: psycoANALyse_me69</p>
+    <p>It's got 24 days.</p>
+    <p><a href="https://archiveofourown.org/works/73171106?view_full_work=true">AO3</a> <a href="fics/ACC-Calendar.html">Calendar Layout</a></p>
+    <p>Tags: <b>[ACC]</b>, <b>[psycoANALyse_me69]</b></p>
+</div></div>
 <div id="AIC-Mum" ><br><div class="rounded_edge_border">
     <p><b><u>An Inspector Calls Your Mum</u></b></p>
     <p>Author: Just_Someone_888</p>
