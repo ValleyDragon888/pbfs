@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>A Christmas Calendar, by psycoANALyse_me69</title>
+  <style type="text/css">
+    p.message { text-align: center; }
+    .meta h1 { font-size: 1.5em; text-align: center; }
+    .meta h2 { font-size: 1.25em; text-align: center; }
+    .meta h2 { page-break-before: always; }
+    .meta .byline { text-align: center; }
+    .meta dl.tags { border: 1px solid; padding: 1em; }
+    .meta dd { margin: -1em 0 0 10em; }
+    .meta .endnote-link { font-size: .8em; }
+    /* List child related works under the labeling dt */
+    #afterword .meta dd { margin: 1em 0 0 1em; }
+    /* Invisible headings to help Calibre make a Table of Contents */
+    .toc-heading { display: none; }
+    @font-face { font-family: JetbrainsMono-Medium; src: url('../JetBrainsMono-Medium.woff2'); } 
+        body {
+            background-color: azure;
+            color: black;
+            font-family: JetbrainsMono-Medium;
+        }
+    table {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 40pt;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    hide_all_days();
+    });
+    var days_added = ["1", "2", "3"];
+    function hide_all_days() {
+        for (var d = 0; d < days_added.length; d++) {
+            document.getElementById(days_added[d]).style.display = "none"
+        }
+    }
+
+    function daySelected(day) {
+        for (var d = 0; d < days_added.length; d++) {
+            document.getElementById(days_added[d]).style.display = "none"
+        }
+        document.getElementById(day).style.display = "block"
+    }
+
+  </script>
+</head>
+<body>
+    <h1 style="text-align: center;"><b><u>Calendar</u></b></h1>
+    <div style="align-content: center;">
+        <table>
+            <tr>
+                <td onclick="daySelected('1')">1</td>
+                <td onclick="daySelected('2')">2</td>
+                <td onclick="daySelected('3')">3</td>
+                <td onclick="daySelected('4')">4</td>
+                <td onclick="daySelected('5')">5</td>
+                <td onclick="daySelected('6')">6</td>
+                <td onclick="daySelected('7')">7</td>
+            </tr>
+            <tr>
+                <td onclick="daySelected('8')">8</td>
+                <td onclick="daySelected('9')">9</td>
+                <td onclick="daySelected('10')">10</td>
+                <td onclick="daySelected('11')">11</td>
+                <td onclick="daySelected('12')">12</td>
+                <td onclick="daySelected('13')">13</td>
+                <td onclick="daySelected('14')">14</td>
+            </tr>
+            <tr>
+                <td onclick="daySelected('15')">15</td>
+                <td onclick="daySelected('16')">16</td>
+                <td onclick="daySelected('17')">17</td>
+                <td onclick="daySelected('18')">18</td>
+                <td onclick="daySelected('19')">19</td>
+                <td onclick="daySelected('20')">20</td>
+                <td onclick="daySelected('21')">21</td>
+            </tr>
+            <tr>
+                <td onclick="daySelected('22')">22</td>
+                <td onclick="daySelected('23')">23</td>
+                <td onclick="daySelected('24')">24</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <!-- Day 1-->
+        <div id="1">
+            <h1><b>Day 1</b></h1>
+            <p>Text</p>
+        </div>
+        <!-- Day 2-->
+        <div id="2">
+            <h1><b>Day 2</b></h1>
+            <p>Text</p>
+        </div>
+        <!-- Day 3-->
+        <div id="3">
+            <h1><b>Day 3</b></h1>
+            <p>Text</p>
+        </div>
+
+         
+    </div>
+</body>
+</html>
