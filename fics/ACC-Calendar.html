@@ -41,6 +41,17 @@
         "11", "12", "13", "14", "15", "16", "17", "18", "19", "20",
         "21", "22", "23", "24"
     ];
+    const date = new Date();
+    var developer_mode = false
+    function isAllowed(day) {
+        if ((date.getMonth()+1 == 12 && date.getDate() >= day) || developer_mode) {
+            return true
+        } else {
+            alert("Wait for the day to open the advent calandar, you idiot.")
+            return false
+        }
+
+    }
     function hide_all_days() {
         for (var d = 0; d < days_added.length; d++) {
             document.getElementById(days_added[d]).style.display = "none"
@@ -48,10 +59,12 @@
     }
 
     function daySelected(day) {
-        for (var d = 0; d < days_added.length; d++) {
-            document.getElementById(days_added[d]).style.display = "none"
+        if (isAllowed(day)) {
+            for (var d = 0; d < days_added.length; d++) {
+                document.getElementById(days_added[d]).style.display = "none"
+            }
+            document.getElementById(day).style.display = "block"
         }
-        document.getElementById(day).style.display = "block"
     }
 
   </script>
