@@ -39,9 +39,10 @@
                 "AIC-Mum": {"novel" : "AIC", "author" : "Just_Someone_888"},
                 "AIC-Gentleman": {"novel" : "AIC", "author" : "psycoANALyse_me69"},
                 "Jerry": {"novel": "Original", "author": "Just_Someone_888"},
-                "ACC-Calendar": {"novel": "ACC", "author" : "psycoANALyse_me69"}
+                "ACC-Calendar": {"novel": "ACC", "author" : "psycoANALyse_me69"},
+                "Diagram":{"novel":"Original", "author":"Bianca B."}
             }
-            fic_names = ["AIC-Mum", "AIC-Gentleman", "Jerry", "ACC-Calendar"]
+            fic_names = ["AIC-Mum", "AIC-Gentleman", "Jerry", "ACC-Calendar", "Diagram"]
             novels = []
             if (document.getElementById("AIC").checked) {novels.push("AIC")}
             if (document.getElementById("ACC").checked) {novels.push("ACC")}
@@ -49,6 +50,7 @@
             authors = []
             if (document.getElementById("Just_Someone_888").checked) {authors.push("Just_Someone_888")}
             if (document.getElementById("psycoANALyse_me69").checked) {authors.push("psycoANALyse_me69")}
+            if (document.getElementById("Bianca B.").checked) {authors.push("Bianca B.")}
             for (var fic of fic_names) {
                 if (authors.includes(fics[fic]["author"]) && novels.includes(fics[fic]["novel"])) {
                     document.getElementById(fic).style.display = "block"
@@ -85,6 +87,8 @@
 <label for="Just_Someone_888"> Just_Someone_888</label><br>  
 <input type="checkbox" id="psycoANALyse_me69" name="psycoANALyse_me69" value="psycoANALyse_me69" checked>
 <label for="psycoANALyse_me69"> psycoANALyse_me69</label><br> 
+<input type="checkbox" id="Bianca B." name="Bianca B." value="Bianca B." checked>
+<label for="Bianca B."> Bianca B.</label><br> 
 
 <br>
 <button onclick="ApplyTags()">Apply</button>
@@ -96,6 +100,12 @@
     <p>It's got 24 days.</p>
     <p><a href="https://archiveofourown.org/works/73171106?view_full_work=true">AO3</a> <a href="fics/ACC-Calendar.html">Calendar Layout</a></p>
     <p>Tags: <b>[ACC]</b>, <b>[psycoANALyse_me69]</b></p>
+</div></div>
+<div id="Diagram"><br><div class="rounded_edge_border">
+    <p><b><u>The Diagram</u></b></p>
+    <p>Author: REYAF</p>
+    <p><a href="fics/Diagram.html">Raw</a></p>
+    <p>Tags: <b>[Original]</b>, <b>[Bianca B.]</b></p>
 </div></div>
 <div id="AIC-Mum" ><br><div class="rounded_edge_border">
     <p><b><u>An Inspector Calls Your Mum</u></b></p>
