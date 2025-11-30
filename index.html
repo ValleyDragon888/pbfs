@@ -41,9 +41,10 @@
                 "Jerry": {"novel": "Original", "author": "Just_Someone_888"},
                 "ACC-Calendar": {"novel": "ACC", "author" : "psycoANALyse_me69"},
                 "ACC-Inspector": {"novel": "ACC", "author":"Just_Someone_888"},
-                "Diagram":{"novel":"Original", "author":"Bianca B."}
+                "Diagram":{"novel":"Original", "author":"Bianca B."},
+                "Midlife":{"novel":"Original", "author":"Ursa_minor"}
             }
-            fic_names = ["AIC-Mum", "AIC-Gentleman", "Jerry", "ACC-Calendar", "Diagram", "ACC-Inspector"]
+            fic_names = ["AIC-Mum", "AIC-Gentleman", "Jerry", "ACC-Calendar", "Diagram", "ACC-Inspector", "Midlife"]
             novels = []
             if (document.getElementById("AIC").checked) {novels.push("AIC")}
             if (document.getElementById("ACC").checked) {novels.push("ACC")}
@@ -52,6 +53,7 @@
             if (document.getElementById("Just_Someone_888").checked) {authors.push("Just_Someone_888")}
             if (document.getElementById("psycoANALyse_me69").checked) {authors.push("psycoANALyse_me69")}
             if (document.getElementById("Bianca B.").checked) {authors.push("Bianca B.")}
+            if (document.getElementById("Ursa_minor").checked) {authors.push("Ursa_minor")}
             for (var fic of fic_names) {
                 if (authors.includes(fics[fic]["author"]) && novels.includes(fics[fic]["novel"])) {
                     document.getElementById(fic).style.display = "block"
@@ -90,6 +92,8 @@
 <label for="psycoANALyse_me69"> psycoANALyse_me69</label><br> 
 <input type="checkbox" id="Bianca B." name="Bianca B." value="Bianca B." checked>
 <label for="Bianca B."> Bianca Bitchenbergen</label><br> 
+<input type="checkbox" id="Ursa_minor" name="Ursa_minor" value="Ursa_minor" checked>
+<label for="Ursa_minor">Ursa_minor</label><br> 
 
 <br>
 <button onclick="ApplyTags()">Apply</button>
@@ -107,6 +111,12 @@
     <p>Author: Bianca Bitchenbergen</p>
     <p><a href="fics/Diagram.html">Raw</a></p>
     <p>Tags: <b>[Original]</b>, <b>[Bianca Bitchenbergen]</b></p>
+</div></div>
+<div id="Midlife"><br><div class="rounded_edge_border">
+    <p><b><u>The Midlife Crisis</u></b></p>
+    <p>Author: Ursa_minor</p>
+    <p><a href="fics/midlife.html">Raw</a></p>
+    <p>Tags: <b>[Original]</b>, <b>[Ursa_minor]</b></p>
 </div></div>
 <div id="ACC-Inspector"><br><div class="rounded_edge_border">
     <p><b><u>An Inspector Calls on your Carol</u></b></p>
